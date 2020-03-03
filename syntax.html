@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Introduction to HTML</title>
+  <link rel="stylesheet" href="css/styles.css">
+
+  
+</head>
+
+<body>
+  <header role="banner">
+
+    <h1>HTML Essential Training</h1>
+    <h2> HTML Syntax</h2>
+    <nav role="navigation">
+
+      <ul>
+        <li><a href="index.html" title="Introduction to HTML"> Introduction to HTML</a></li>
+        <li><a href="syntax.html" title="HTML Syntax"> HTML syntax</a></li>
+        <li><a href="links.html" title="Creating links"> Creating links</a></li>
+        <li><a href="reference.html" title="HTML Reference"> HTML reference</a></li>
+        <li><a href="next.html" title="Next Steps"> Next steps<a /></li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <main role="main">
+
+    <article>
+      <header>
+
+        Because HTML is often the people’s first experience with coding, there can be a fair amount of apprehension about learning it. Thankfully, HTML syntax is relatively simple and easy to learn. Most people can learn the basics of HTML and begin
+        coding it within the same day.</p>
+      </header>
+
+      <section>
+        <h3>A markup language</h3>
+        <p> HTML is a markup language. That means that content on the page is “marked up” by tags which identify the content inside of them. A paragraph, for example, can be identified by placing the “&lt;p&gt;” opening tag prior to the paragraphs content and the
+            “&lt;/p&gt;” closing tag at the end of a paragraph. The full paragraph would look like this:</p>
+
+        <pre><code class="term">&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></pre>
+
+        <p>
+
+          Tags consist of a left-angle bracket (<) followed by a character or characters that identify the tag (the “p” for paragraph) and a closing right-angle bracket (>). The closing tags for an element are exactly the same as an opening tag,
+            except that a forward slash (/) will precede the tags characters.
+            <br>
+            Although most elements require an opening and a closing tag, the closing tag is optional for some elements and not required at all for others. While there are exceptions to the rule, for the most part any element that contains content
+            inside the opening and closing tags also requires a closing tag.</p>
+      </section>
+
+      <section>
+
+        <h3>Basic document structure</h3>
+        <p>The core of all HTML documents revolves around three basic tags. First, an html tag (<html>) is required to identify the document as an HTML file. Directly inside the html tag, you’ll find the head element (
+
+          <head>). The head of a document is where you’ll find the document’s metadata, the document title, and links to external resources such as style sheets and scripts. A good way to think about the document’s head is that it doesn’t contain any
+            of the page’s<em>visual</em> content rather it contains information about the document and the resources that help make the page work. Directly after the document’s head, you’ll find its body (
+
+          &lt;body&gt;). The body is where you’ll find all of the page’s actual content. Headings, paragraphs, images, lists, tables, and other content will be located here. At its most basic, an HTML file would look like this:</p>
+        <pre><code>
+ &lt;html&gt;
+     &lt;head&gt;
+     &lt;/head&gt;
+     &lt;body&gt;
+     &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      </section>
+
+      <section>
+
+        <h3>DOCTYPES</h3>
+        <p>
+
+          If you’ve looked at HTML pages before, you’ve probably noticed a long, somewhat intimidating tag just before the opening HTML tag. This is a doctype declaration and it’s a very important but often misunderstood component of HTML pages.
+          Essentially, it tells the user agent parsing your page which version of HTML (or XHTML) to expect, so that it knows which syntax rules to use when rendering your page. The doctype you use should be based on the version of HTML you’re using
+          to author the page. While that all sounds good in theory, in reality most of the time a doctype is simply triggering “standards-mode” rather than “quirks mode” (based on older browsers non-standard way of rendering pages). For that reason
+          alone, all HTML documents should be preceded by a doctype declaration. For more information on doctypes, and the history behind them, check out Mark Pilgrim’s excellent section on doctypes from his <em><a
+              href="http://diveintohtml5.info/semantics.html#the-doctype" title="Dive into HTML5"> Dive Into HTML5</a></em> book. Here are some of the more common HTML doctypes:</p>
+
+        <h4 class="dtd">HTML 4.0 transitional</h4>
+        <pre><code class="term">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</code></pre>
+
+        <h4 class="dtd">XHTML 1.0 Transitional</h4>
+        <pre><code class="term">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</code></pre>
+
+        <h4 class="dte">HTML5</h4>
+        <pre><code class="term">&lt;!DOCTYPE HTML&gt;</code></pre>
+
+      </section>
+      <section>
+        <h3>Element attributes</h3>
+        <p>Some elements can be enhanced through the use of attributes. Attributes allow you to provide more information or additional functionality to the content. Attributes are added to the opening tag of an element and consist of two parts, the
+        <strong>name</strong> and <strong>value</strong>. Although the syntax varies based on the version of HTML you’re using, it’s standard practice to put values within quotation marks.</p>
+
+        <pre><code class="term">&lt;h1 class=”headline”&gt;Article’s main headline&lt;/h1&gt;</code></pre>
+      </section>
+      <section>
+
+
+        <h3>Replaced elements</h3>
+        <p>
+
+          Some HTML elements represent content that is replaced by an outside resource such as an image, form control, or a video file. These elements are referred to as replaced elements and usually have a predetermined width or height. In some
+          cases the elements will have attributes that tell the browser where to find an external resource like an image or video.</p>
+
+        <pre><code class="term">&lt;img src=“photo.jpg” alt=“my awesome photo”&gt;&nbsp</code></pre>
+      </section>
+      <section>
+        <h3>Code structure</h3>
+        <p>
+
+          HTML documents create structure by nesting elements inside of one another. You might group a section of page content together by wrapping them within a &lt;div&gt; or &lt;section&gt; element, for example. When nesting one tag within another one,
+              you must first close any child elements prior to closing any parent elements.
+              This syntax, for example, would be incorrect:</p>
+
+        <pre><code class="term">You must close all nested tags &lt;strong>first!&lt;/p&gt;&lt;/strong&gt;</pre></code>
+        <p>
+
+          Rather, the correct syntax would be:&lt;/P&gt;
+
+        <pre><code class="term">You must close all nested tags &lt;strong&gt;first!&lt;/strong&gt;&lt;/p&gt;</pre></code>
+        <p> HTML also has specific rules about which elements can be nested within other elements. A paragraph for example, can’t be nested inside a heading. For the most part, these rules are based around the type of content the tag represents.
+          HTML 4 has two basic types of content: block and inline. Block-level elements typically occupy their own line within a document, usually stacking one on top of each other in the order they appear in your code. Inline-level elements can
+          appear within the flow of block level elements. Elements like strong, bold emphasis , italic, and span are always found inside block-level elements.
+          <br>HTML5, on the other hand, expands the concept of content types to seven different categories of content, with some elements belonging to multiple categories. This replaces the concept of block-level and inline-level elements and
+          adds some additional nesting syntax rules. For the most part, the rules around nesting elements make sense and are fairly easy to pick up. You should be prepared, however, for it to take some time before you fully understand all of the
+          rules surrounding nesting elements. One way to making sure to your code is structured properly is to validate your code through a service like the W3C’s Markup Validation service.</p>
+      </section>
+
+      <section>
+      <h3>Commenting code</h3>
+        <p>Often it is helpful to leave notes to yourself or other developers within your code. Perhaps you want to remind yourself what a certain script does, or remind a co-worker how to properly structure specific content. To do this, you’ll use
+          comments. Comments should appear on their own line, and typically appear directly before or after the code they refer to. Comments begin with a left-angle bracket, an exclamation point, and two hyphens (!--) and end with two hyphens
+          followed by a right-angle bracket (-->).</p>
+
+        <h4>Comment syntax:</h4>
+
+
+        <pre><code class="term">&lt;!-- This is a comment --&gt;</code></pre>
+      </section>
+<section>
+
+<p>Certain characters are reserved in HTML, meaning that you shouldn’t use them outside of their specific purpose. The angle brackets, for example, are reserved for tags, and using them anywhere outside of a tag could cause parsing errors in browsers. However, you can still use these reserved characters and other special characters or symbols by using what is known as a <strong>named character entity</strong>. These special codes tell the user agent to replace the entity code with a specific character. These entities begin with an ampersand (<strong>&amp;amp;</strong>) followed by the entity name and end with a semicolon (;). To display an ampersand, for example, you would type &amp; in place of the actual ampersand. You can find named character entity lists within the HTML specifications, although the format for them can be a bit hard to read. You can also find a useful list of character entities on the <a href="reference.html#named">HTML Reference</a> page, and a more comprehensive list on <a href=""http://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references" title="Character entity reference">Wikipedia</a></P></section>
+</article>
+</main>
+<footer role="contentinfo">
+  <p>
+
+    &copy; <a href="http://www.lynda.com" title="lynda.com" target="_blank">lynda.com</a> | follow me and lynda.com on Twitter! <a href="https://twitter.com/jameswillweb" title="Follow me on Twitter">@jameswillweb</a><a
+      href="https://twitter.com.lynda" title="Follow lynda on twitter">@lyndadotcom</a></p>
+
+  <hr>
+</footer>
+  </body>
+</html>

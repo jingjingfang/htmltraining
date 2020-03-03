@@ -1,0 +1,43 @@
+html{
+background-color: #35495e;
+
+}
+    body {
+      width: 80%;
+      padding:2.5% 2.5% 0;
+      margin:20px auto;
+      font-family: Georgia, "Times New Roman"serif;
+      background-color: white;
+
+    }
+
+
+    h2 {
+      color: green;
+      font-weight: bold;
+
+    }
+
+    p {
+      font-size: 1em;
+      line-height: 1.5;
+      text-align: justify;
+      margin-bottom: 1.5em;
+    }
+
+.term{
+
+  background-color:#eaeaea;
+  color:red;
+}
+.flowright{
+
+float:right;
+margin-left:10px;
+}
+
+
+.flowleft{
+float:left;
+margin-left:10px;
+}
